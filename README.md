@@ -36,11 +36,19 @@ Interlinked.exe [options]
 
 ### Options
 
-- `-h, --help`: Show help message
-- `-f, --focus ADDRESS`: Focus on a specific address
-- `-s, --hidden`: Run with hidden console
-- `--format FORMAT`: Set output format (csv/json)
-- ...and many more
+- `-h, --help`: Display this help message with all available options
+- `-f, --focus ADDRESS`: Focus monitoring on a specific memory address (in hex format, e.g., 0x7ff79b9b4991)
+- `-s, --hidden`: Run with a hidden console window for more discreet operation
+- `-i, --interval MS`: Set the monitoring interval in milliseconds (default: 50ms)
+- `-l, --log FILE`: Specify a custom log file path instead of the default "interlinked_log.txt"
+- `--no-ce-detect`: Disable automatic Cheat Engine detection
+- `--save-interval N`: Set how often branch history is saved to disk in seconds (default: 5s)
+- `--no-target-analysis`: Disable analysis of jump targets for suspicious properties
+- `--no-memory-changes`: Disable detection of memory changes in hot addresses
+- `--no-color`: Disable colored output in the console
+- `--hot-threshold N`: Set the threshold for what's considered a "hot" address (default: 10 hits)
+- `--hot-timeout N`: Set how long (in seconds) a hot address can go without being hit before flagging it (default: 5s)
+- `--format FORMAT`: Set the output format for branch history files (csv/json)
 
 ## Requirements
 
@@ -60,3 +68,5 @@ This tool is created for educational and research purposes only. Understanding h
 ## License
 
 Copyright © 2025 
+
+All rights reserved. This project is provided for educational and research purposes only. Unauthorized distribution, modification, or commercial use is prohibited without express permission from the author. 
